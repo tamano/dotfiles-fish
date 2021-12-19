@@ -15,6 +15,9 @@ if status is-interactive
     eval (/opt/homebrew/bin/brew shellenv)
 end
 
+# anyenv
+status --is-interactive; and source (anyenv init -|psub)
+
 # iterm2
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 

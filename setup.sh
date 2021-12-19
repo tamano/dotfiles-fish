@@ -15,6 +15,7 @@ brew install gh
 brew install lsd
 brew install zoxide
 brew install fzf
+brew install anyenv
 
 echo "✅ Complete installing tools"
 
@@ -30,6 +31,8 @@ if test $SHELL != "/opt/homebrew/bin/fish"; then
     echo "Change default shell to fish"
     chsh -s /opt/homebrew/bin/fish
 fi
+
+anyenv install --init
 
 echo "✅ Complete tool's setup"
 
