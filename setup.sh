@@ -53,4 +53,24 @@ done
 
 echo "✅ Complete linking dotfiles"
 
+#########################################################
+echo "⏱️ Begin linking .config"
+#########################################################
+
+CURRENT_DIR=`pwd`
+
+for DIR_NAME in `ls -1A $CURRENT_DIR/dotconfig/`; do
+    ORIGINAL_DIR="${CURRENT_DIR}/dotconfig/${DIR_NAME}"
+    TARGET_LINK="${HOME}/.config/${DIR_NAME}"
+
+    if [ -e $TARGET_LINK ]; then
+        echo "[skip] ${TARGET_LINK} already exists"
+    else
+        ln -s $ORIGINAL_DIR $TARGET_LINK
+        echo "[link] ${TARGET_LINK} created"
+    fi
+done
+
+echo "✅ Complete linking .config"
+
 echo "🏁 All Complete!"
