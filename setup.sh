@@ -36,6 +36,21 @@ echo "✅ Complete tool's setup"
 #########################################################
 echo "⏱️ Begin linking dotfiles"
 #########################################################
+
+CURRENT_DIR=`pwd`
+
+for FILE_NAME in `ls -1A $CURRENT_DIR/dotfiles/`; do
+    ORIGINAL_FILE="${CURRENT_DIR}/dotfiles/${FILE_NAME}"
+    TARGET_LINK="${HOME}/${FILE_NAME}"
+
+    if [ -e $TARGET_LINK ]; then
+        echo "[skip] ${TARGET_LINK} already exists"
+    else
+        ln -s $ORIGINAL_FILE $TARGET_LINK
+        echo "[link] ${TARGET_LINK} created"
+    fi
+done
+
 echo "✅ Complete linking dotfiles"
 
 echo "🏁 All Complete!"
