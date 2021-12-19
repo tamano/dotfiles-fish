@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/fish
+#!/bin/bash
 
 echo "🏎 Starting Setup!"
 
