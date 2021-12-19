@@ -4,6 +4,11 @@ function fish_mode_prompt
     # NOOP - Disable vim mode indicator
 end
 
+# alias
+alias g='git'
+alias vim='nvim'
+alias be='bundle exec'
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     eval (/opt/homebrew/bin/brew shellenv)
