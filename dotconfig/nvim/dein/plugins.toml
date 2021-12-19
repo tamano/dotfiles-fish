@@ -1,0 +1,33 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]] # 非同期処理
+repo = 'Shougo/vimproc.vim'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+repo = 'Shougo/vimfiler'
+
+[[plugins]] # カラーテーマ
+repo = 'jacoborus/tender.vim'
+
+[[plugins]] # j,kによる移動を爆速に
+repo = 'rhysd/accelerated-jk'
+
+# statusline
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+# ブランチ名をlightlineに表示する
+[[plugins]]
+repo = 'itchyny/vim-gitbranch'
+
+# インデントを可視化
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+# 無駄な空白をハイライト
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
