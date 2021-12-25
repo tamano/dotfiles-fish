@@ -4,6 +4,8 @@ function fish_mode_prompt
     # NOOP - Disable vim mode indicator
 end
 
+set PATH {$HOME}/bin $PATH
+
 # alias
 alias g='git'
 alias vim='nvim'
