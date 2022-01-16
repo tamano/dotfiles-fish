@@ -1,0 +1,12 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Yuya TAMANO
+	email = 965378+tamano@users.noreply.github.com
+[init]
+	defaultBranch = main
+[alias]
+	st = status
+	co = checkout
+	c = commit
+	a = add
