@@ -16,6 +16,7 @@ brew install lsd
 brew install zoxide
 brew install fzf
 brew install anyenv
+brew install ripgrep
 
 echo "✅ Complete installing tools"
 

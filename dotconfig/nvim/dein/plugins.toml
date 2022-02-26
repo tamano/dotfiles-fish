@@ -31,3 +31,8 @@ repo = 'Yggdroot/indentLine'
 # 無駄な空白をハイライト
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
+
+# ripgrepコマンド
+[[plugins]]
+repo = 'kyoh86/vim-ripgrep'
+
