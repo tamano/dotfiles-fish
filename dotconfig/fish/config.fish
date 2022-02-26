@@ -7,9 +7,13 @@ end
 set PATH {$HOME}/bin $PATH
 
 # alias
+alias ll='ls -la'
 alias g='git'
 alias vim='nvim'
 alias be='bundle exec'
+
+alias d='cd ~/Desktop'
+alias ws='cd ~/workspace'
 
 # homebrew
 if status is-interactive
