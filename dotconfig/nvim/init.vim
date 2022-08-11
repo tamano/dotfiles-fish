@@ -18,8 +18,10 @@ endif
 if dein#load_state(s:dein_dir)
     call dein#begin(s:dein_dir)
 
-    call dein#load_toml('~/.config/nvim/dein/plugins.toml', {'lazy': 0})
-    call dein#load_toml('~/.config/nvim/dein/lazy.toml', {'lazy': 1})
+    let s:toml_dir = '~/.config/nvim/dein'
+
+    call dein#load_toml(s:toml_dir . '/plugins.toml', {'lazy': 0})
+    call dein#load_toml(s:toml_dir . '/lazy.toml', {'lazy': 1})
 
     call dein#end()
     call dein#save_state()
