@@ -62,3 +62,13 @@ lua << EOF
   vim.api.nvim_set_keymap('n', '<Leader>l', ':noh<CR>', kopts)
 EOF
 '''
+
+# スクロールバーを追加
+[[plugins]]
+repo = 'petertriho/nvim-scrollbar'
+hook_add = '''
+lua << EOF
+  require("scrollbar").setup()
+  require("scrollbar.handlers.search").setup()
+EOF
+'''
