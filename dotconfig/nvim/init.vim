@@ -40,8 +40,8 @@ endfor
 
 
 let g:lightline = {
-    \   'colorscheme': 'tender',
-    \   'active': {
+    \ 'colorscheme': 'tender',
+    \ 'active': {
     \     'left': [ [ 'mode', 'paste' ],
     \               [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
     \   },
