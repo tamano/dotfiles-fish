@@ -40,3 +40,25 @@ hook_add = '''
   nmap <C-j> <Plug>(edgemotion-j)
   nmap <C-k> <Plug>(edgemotion-k)
 '''
+
+# 検索結果件数をバーチャル表示
+[[plugins]]
+repo = 'kevinhwang91/nvim-hlslens'
+hook_add = '''
+lua << EOF
+  local kopts = {noremap = true, silent = true}
+
+  vim.api.nvim_set_keymap('n', 'n',
+    [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]],
+    kopts)
+  vim.api.nvim_set_keymap('n', 'N',
+    [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]],
+    kopts)
+  vim.api.nvim_set_keymap('n', '*', [[*<Cmd>lua require('hlslens').start()<CR>]], kopts)
+  vim.api.nvim_set_keymap('n', '#', [[#<Cmd>lua require('hlslens').start()<CR>]], kopts)
+  vim.api.nvim_set_keymap('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]], kopts)
+  vim.api.nvim_set_keymap('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], kopts)
+
+  vim.api.nvim_set_keymap('n', '<Leader>l', ':noh<CR>', kopts)
+EOF
+'''
