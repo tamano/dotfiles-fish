@@ -9,9 +9,9 @@ repo = 'Shougo/unite.vim'
 
 [[plugins]] # カラーテーマ
 repo = 'jacoborus/tender.vim'
-
-[[plugins]] # j,kによる移動を爆速に
-repo = 'rhysd/accelerated-jk'
+hook_add = '''
+  colorscheme tender
+'''
 
 # statusline
 [[plugins]]

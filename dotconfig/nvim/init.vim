@@ -38,7 +38,6 @@ for file in splt
     execute 'source' file
 endfor
 
-colorscheme tender
 
 let g:lightline = {
     \   'colorscheme': 'tender',
