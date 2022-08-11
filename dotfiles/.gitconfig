@@ -8,5 +8,8 @@
 [alias]
 	st = status
 	co = checkout
-	c = commit
 	a = add
+	c = commit -v
+	ca = commit -v --amend
+
+  cinit = commit --allow-empty -m 'Initial Commit.'
