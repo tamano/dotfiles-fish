@@ -18,7 +18,6 @@ endif
 if dein#load_state(s:dein_dir)
     call dein#begin(s:dein_dir)
 
-    call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
     call dein#load_toml('~/.config/nvim/dein/plugins.toml', {'lazy': 0})
     call dein#load_toml('~/.config/nvim/dein/lazy.toml', {'lazy': 1})
 
