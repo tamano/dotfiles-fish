@@ -5,6 +5,7 @@ function fish_mode_prompt
 end
 
 set PATH {$HOME}/bin $PATH
+set PATH {$HOME}/.cargo/bin $PATH
 
 # alias
 alias ll='ls -la'

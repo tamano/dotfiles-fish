@@ -13,3 +13,6 @@ on_ft = 'elixir'
 repo = 'awetzel/elixir.nvim'
 build = './install.sh'
 on_ft = 'elixir'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
