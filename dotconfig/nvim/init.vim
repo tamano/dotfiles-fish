@@ -3,9 +3,12 @@ if &compatible
   set nocompatible
 endif
 
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
-
 let s:dein_dir = expand('~/.cache/dein')
+
+if &runtimepath !~# '/dein.vim'
+  let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+  execute 'set runtimepath+=' . s:dein_repo_dir
+endif
 
 if dein#load_state(s:dein_dir)
     call dein#begin(s:dein_dir)
