@@ -18,7 +18,11 @@ if dein#load_state(s:dein_dir)
     call dein#save_state()
 endif
 
-source ~/.vimrc
+let splt = split(glob("~/.config/nvim/config/" . "*.vim"))
+
+for file in splt
+    execute 'source' file
+endfor
 
 colorscheme tender
 
