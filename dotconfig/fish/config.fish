@@ -15,6 +15,7 @@ alias be='bundle exec'
 
 alias d='cd ~/Desktop'
 alias ws='cd ~/workspace'
+alias ide='~/dotfiles-fish/bin/tmux-pane-splitter.sh'
 
 # homebrew
 if status is-interactive
