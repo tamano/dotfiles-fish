@@ -1,6 +1,28 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+merged = '0'
+hook_add = '''
+let g:coc_global_extensions = [
+      \'coc-diagnostic', 
+      \'coc-explorer', 
+      \'coc-html', 
+      \'coc-tsserver', 
+      \'coc-json', 
+      \'coc-markdownlint', 
+      \'coc-solargraph',
+      \'coc-rust-analyzer', 
+      \'coc-sql', 
+      \'coc-yaml'
+\]
+
+:nmap <space>e <Cmd>CocCommand explorer<CR>
+'''
+
+
 [[plugins]] # 非同期処理
 repo = 'Shougo/vimproc.vim'
 
