@@ -22,6 +22,16 @@ let g:coc_global_extensions = [
 :nmap <space>e <Cmd>CocCommand explorer<CR>
 '''
 
+# 色付け強化
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+hook_post_update = '''
+:TSUpdate
+'''
+
+# 関数定義を上に残してスクロール
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter-context'
 
 [[plugins]] # 非同期処理
 repo = 'Shougo/vimproc.vim'
