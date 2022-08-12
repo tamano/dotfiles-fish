@@ -27,6 +27,7 @@ if dein#load_state(s:dein_dir)
     call dein#save_state()
 endif
 
+colorscheme tender
 
 if has('vim_starting') && dein#check_install()
     call dein#install()
