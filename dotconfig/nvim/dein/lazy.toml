@@ -1,5 +1,43 @@
-[[plugins]] # ローカル変数ハイライト
-repo = 'todesking/ruby_hl_lvar.vim'
+# 色付け強化
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+on_event = 'BufRead'
+hook_post_update = 'TSUpdate'
+hook_source = '''
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = {
+    "ruby", "rust", "sql", "fish", "javascript", "json",
+    "markdown", "toml", "yaml"
+  },
+  sync_install = false,
+  auto_install = true,
+
+  highlight = {
+    enable = true,         -- syntax highlightを有効にする
+  },
+  indent = {
+    enable = true,         -- インデントを有効にできます
+  },
+
+}
+EOF
+'''
+
+# 関数定義を上に残してスクロール
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter-context'
+on_event = 'BufRead'
+
+# 関数の引数に別の色をつける
+[[plugins]]
+repo = 'm-demare/hlargs.nvim'
+on_event = 'BufRead'
+
+# ブロックの最後に定義を表示
+[[plugins]]
+repo = 'haringsrob/nvim_context_vt'
+on_event = 'BufRead'
 
 [[plugins]]
 repo = 'elixir-lang/vim-elixir'

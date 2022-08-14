@@ -23,17 +23,6 @@ let g:coc_global_extensions = [
 :nmap <space>e <Cmd>CocCommand explorer<CR>
 '''
 
-# 色付け強化
-[[plugins]]
-repo = 'nvim-treesitter/nvim-treesitter'
-hook_post_update = '''
-:TSUpdate
-'''
-
-# 関数定義を上に残してスクロール
-[[plugins]]
-repo = 'nvim-treesitter/nvim-treesitter-context'
-
 [[plugins]] # 非同期処理
 repo = 'Shougo/vimproc.vim'
 
@@ -110,3 +99,16 @@ hook_add = '''
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 '''
 
+# カーソルjump
+[[plugins]]
+repo = 'phaazon/hop.nvim'
+hook_add = '''
+lua << EOF
+  require'hop'.setup()
+EOF
+nmap <Leader><Leader> [hop]
+xmap <Leader><Leader> [hop]
+nnoremap <silent> [hop]w :HopWord<CR>
+nnoremap <silent> [hop]l :HopLine<CR>
+nnoremap <silent> [hop]f :HopChar1<CR>
+'''
