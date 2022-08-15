@@ -13,6 +13,9 @@ alias g='git'
 alias vim='nvim'
 alias be='bundle exec'
 
+alias python='python3'
+alias pip='pip3'
+
 alias d='cd ~/Desktop'
 alias ws='cd ~/workspace'
 alias ide='~/dotfiles-fish/bin/tmux-pane-splitter.sh'
